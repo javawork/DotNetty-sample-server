@@ -1,0 +1,26 @@
+syntax = "proto3";
+package pbsum;
+
+enum MessageCode {
+    NONE = 0;
+    PING = 1;
+    PONG = 2;
+    ADD = 3;
+    LOCAL_SUM = 4;
+}
+
+message Ping {
+    int64 clientTick = 1;
+}
+
+message Pong {
+    int64 clientTick = 1;
+}
+
+message Add {
+    int32 num = 1;
+}
+
+message LocalSum {
+    int32 sum = 1;
+}
